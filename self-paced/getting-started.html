@@ -29,7 +29,7 @@ set in the _output.yml file.</p>" />
 <meta name="author" content="Aaron Peikert &amp; Hannes Diemerling" />
 
 
-<meta name="date" content="2023-03-24" />
+<meta name="date" content="2023-06-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -86,17 +86,21 @@ set in the _output.yml file.</p>" />
 <li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html#what-concepts-must-we-know-about"><i class="fa fa-check"></i>What concepts must we know about?</a></li>
 <li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html#what-software-must-we-know-about"><i class="fa fa-check"></i>What software must we know about?</a></li>
 <li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html#what-services-will-we-use"><i class="fa fa-check"></i>What services will we use?</a></li>
-<li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html#setup"><i class="fa fa-check"></i>Setup</a>
+<li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html#what-does-self-paced-mean"><i class="fa fa-check"></i>What does self-paced mean?</a></li>
+<li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html#what-are-infoboxes"><i class="fa fa-check"></i>What are infoboxes?</a></li>
+<li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html#what-else-should-i-know-before-i-start"><i class="fa fa-check"></i>What else should i know before I start?</a></li>
+<li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html#setup"><i class="fa fa-check"></i>Setup!</a>
 <ul>
 <li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html#github"><i class="fa fa-check"></i>GitHub</a></li>
 <li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html#postirstudio-cloud"><i class="fa fa-check"></i>Posti/RStudio Cloud</a></li>
+<li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html#chatgpt"><i class="fa fa-check"></i>ChatGPT</a></li>
 <li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html#final-step"><i class="fa fa-check"></i>Final Step</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="dynamic-documents.html"><a href="dynamic-documents.html"><i class="fa fa-check"></i><b>1</b> Dynamic Documents</a></li>
-<li class="chapter" data-level="2" data-path="version-control.html"><a href="version-control.html"><i class="fa fa-check"></i><b>2</b> Version Control</a></li>
-<li class="chapter" data-level="3" data-path="software-management.html"><a href="software-management.html"><i class="fa fa-check"></i><b>3</b> Software Management</a></li>
-<li class="chapter" data-level="4" data-path="workflow-orchestration.html"><a href="workflow-orchestration.html"><i class="fa fa-check"></i><b>4</b> Workflow Orchestration</a></li>
+<li class="chapter" data-level="" data-path="dynamic-documents.html"><a href="dynamic-documents.html"><i class="fa fa-check"></i>Dynamic Documents</a></li>
+<li class="chapter" data-level="" data-path="version-control.html"><a href="version-control.html"><i class="fa fa-check"></i>Version Control</a></li>
+<li class="chapter" data-level="" data-path="software-management.html"><a href="software-management.html"><i class="fa fa-check"></i>Software Management</a></li>
+<li class="chapter" data-level="" data-path="workflow-orchestration.html"><a href="workflow-orchestration.html"><i class="fa fa-check"></i>Workflow Orchestration</a></li>
 <li class="chapter" data-level="" data-path="before-you-go.html"><a href="before-you-go.html"><i class="fa fa-check"></i>Before you go</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -122,7 +126,7 @@ set in the _output.yml file.</p>" />
 <h1>Getting Started<a href="getting-started.html#getting-started" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="what-is-reproducibility" class="section level2 unnumbered hasAnchor">
 <h2>What is reproducibility?<a href="getting-started.html#what-is-reproducibility" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>TBD</p>
+<p>In the context of research, reproducibility refers to the ability to duplicate results of a study using the same data and methods. It ensures scientific integrity, as it allows others to verify findings and build upon existing work. Reproducibility can be achieved by documenting every step of the research process carefully, using version control systems for tracking changes, and employing tools for managing software environments and Workflow orchestration. Reproducibility is vital in scientific research, promoting transparency, fostering trust, and facilitating continual progress. Moreover, without reproducibility, research may lose its credibility and impact, as we cannot be certain that the results are reliable and accurate. Solving the problems that hinder reproducibility is crucial, which leads us to the problems we will try to understand today.</p>
 </div>
 <div id="what-problems-must-we-solve" class="section level2 unnumbered hasAnchor">
 <h2>What problems must we solve?<a href="getting-started.html#what-problems-must-we-solve" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -162,8 +166,33 @@ Therefore, we suggest to use the prepared software environment we give you in fo
 <p>Additionally, we will make heavy use of GitHub (≠ Git) and
 GitHub Actions (∈ GitHub).</p>
 </div>
+<div id="what-does-self-paced-mean" class="section level2 unnumbered hasAnchor">
+<h2>What does self-paced mean?<a href="getting-started.html#what-does-self-paced-mean" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Self-paced learning is an educational approach that allows you to control the speed and the intensity of your learning. This means you can learn at your own rhythm, pausing, reviewing, and progressing when it suits you best. You are encouraged to actively engage with the material, explore the content, and try to solve problems on your own before seeking help. In this course, there’s no rigid schedule to follow. You’re free to come and go, and move through the content as you please. Remember, while it’s self-guided, you’re not alone - use the infoboxes, explanation follows in the next paragraph, and course leaders are available to assist if you encounter difficulties you can’t resolve on your own. It is a flexible and personal way of learning designed to support you on your learning journey.</p>
+</div>
+<div id="what-are-infoboxes" class="section level2 unnumbered hasAnchor">
+<h2>What are infoboxes?<a href="getting-started.html#what-are-infoboxes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>There are two types of infoboxes in this course. The first type is the Additional info box. These provide information to delve deeper into a topic and can be found throughout the course. Clicking on one of these boxes will take you to more in-depth material.</p>
+<p>The second type are ReproDude infoboxes. You will find these at least once in each chapter. If you have a question or get stuck, click on the relevant box in the chapter and you will be redirected to ReproDude, already informed about the corresponding topic. Ask what you want to know and have a conversation. To use this, you will need a ChatGPT account, a link to which can be found below.</p>
+<div class="infobox" onclick="window.open('https://en.wikipedia.org/wiki/Information', '_blank')">
+  <h2 class="infobox-title">Additional info</h2>
+  <p class="infobox-content">I am an additional infobox that provides you with additional material to educate you more deeply. Click on my sister boxes for more information.</p>
+</div>
+<div class="infoboxgpt" onclick="window.open('https://chat.openai.com/share/e4dfb501-b17b-40ee-a35c-20cda449fbff', '_blank')">
+  <h2 class="infobox-titlegpt">ReproDude</h2>
+  <p class="infobox-contentgpt">I am ReproDude, so if you have a question or are stuck on a topic, click on the appropriate ReproDude box and ask there. You will need an account with ChatGPT to use me. </p>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div id="what-else-should-i-know-before-i-start" class="section level2 unnumbered hasAnchor">
+<h2>What else should i know before I start?<a href="getting-started.html#what-else-should-i-know-before-i-start" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this workshop we will go through many things, many of them complicated. The goal today is to understand what is possible and not to achieve a complete deep technical understanding. So be kind to others and yourself and try not to get frustrated, ReproDude and the workshop leaders are there to help you if necessary.</p>
+<p>Just as you set your own pace in this course, you can also decide which tasks you do in this course. There are two types of tasks:</p>
+<p><span style="color:green">1. The tasks marked in green are important and the workshop will not work if you skip any of these points or do them in the wrong order.</span></p>
+<p><span style="color:blue">2. The tasks marked in blue are completely optional and are meant for trying out and experimenting. You can skip these tasks as you like.</span></p>
+</div>
 <div id="setup" class="section level2 unnumbered hasAnchor">
-<h2>Setup<a href="getting-started.html#setup" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2>Setup!<a href="getting-started.html#setup" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>If you already have an account, than sign in, otherwise, sign up.</p>
 <div id="github" class="section level3 unnumbered hasAnchor">
 <h3>GitHub<a href="getting-started.html#github" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -180,11 +209,21 @@ GitHub Actions (∈ GitHub).</p>
 <p>If you already have a Posit/RStudio account:</p>
 <p><a href="https://login.posit.cloud/login" class="uri">https://login.posit.cloud/login</a></p>
 </div>
+<div id="chatgpt" class="section level3 unnumbered hasAnchor">
+<h3>ChatGPT<a href="getting-started.html#chatgpt" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If you have not used ChatGPT before:</p>
+<p>Use Option: “Sign up”</p>
+<p>Be aware, that you will need to enter your Phone number for this step.</p>
+<p><a href="https://chat.openai.com/auth/login" class="uri">https://chat.openai.com/auth/login</a></p>
+<p>If you already have a ChatGPT account:</p>
+<p>Use Option: “Log in”</p>
+<p><a href="https://chat.openai.com/auth/login" class="uri">https://chat.openai.com/auth/login</a></p>
+</div>
 <div id="final-step" class="section level3 unnumbered hasAnchor">
 <h3>Final Step<a href="getting-started.html#final-step" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Now, you may open the project:</p>
 <p><a href="https://No-link-to-the-project.yet" class="uri">https://No-link-to-the-project.yet</a></p>
-<p>And continue with the <a href="./dynamic-documents.html">next chapter</a> on the left.</p>
+<p>And continue with the <a href="./dynamic-documents.html">next chapter</a>.</p>
 
 </div>
 </div>

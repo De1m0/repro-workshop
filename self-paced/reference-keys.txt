@@ -1,4 +1,0 @@
-dynamic-documents
-version-control
-software-management
-workflow-orchestration
