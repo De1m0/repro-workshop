@@ -169,6 +169,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="dynamic-documents.html"><a href="dynamic-documents.html#a-summary"><i class="fa fa-check"></i>A summary?</a></li>
 </ul></li>
+<li class="chapter" data-level="" data-path="dynamic-documents.html"><a href="dynamic-documents.html#extended-goals"><i class="fa fa-check"></i>Extended Goals?</a></li>
+<li class="chapter" data-level="" data-path="dynamic-documents.html"><a href="dynamic-documents.html#rmarkdown"><i class="fa fa-check"></i>RMarkdown</a>
+<ul>
+<li class="chapter" data-level="" data-path="dynamic-documents.html"><a href="dynamic-documents.html#metadata-yaml"><i class="fa fa-check"></i>Metadata (YAML)</a></li>
+<li class="chapter" data-level="" data-path="dynamic-documents.html"><a href="dynamic-documents.html#text-markdown"><i class="fa fa-check"></i>Text (markdown)</a></li>
+<li class="chapter" data-level="" data-path="dynamic-documents.html"><a href="dynamic-documents.html#code-r"><i class="fa fa-check"></i>Code (R)</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="dynamic-documents.html"><a href="dynamic-documents.html#and-now"><i class="fa fa-check"></i>And now?</a>
+<ul>
+<li class="chapter" data-level="" data-path="dynamic-documents.html"><a href="dynamic-documents.html#final-step-1"><i class="fa fa-check"></i>Final Step</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="version-control.html"><a href="version-control.html"><i class="fa fa-check"></i>Version Control</a></li>
 <li class="chapter" data-level="" data-path="software-management.html"><a href="software-management.html"><i class="fa fa-check"></i>Software Management</a></li>
@@ -196,17 +207,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="dynamic-documents" class="section level1 unnumbered hasAnchor">
 <h1>Dynamic Documents<a href="dynamic-documents.html#dynamic-documents" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="dynamic-documents.html#cb1-1" aria-hidden="true" tabindex="-1"></a>reprodude2 <span class="ot">&lt;-</span> <span class="fu">generate_reprodudes</span>(links<span class="sc">$</span>reprodudes<span class="sc">$</span>two,</span>
-<span id="cb1-2"><a href="dynamic-documents.html#cb1-2" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">&quot;ReproDude&quot;</span>,</span>
-<span id="cb1-3"><a href="dynamic-documents.html#cb1-3" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">&quot;Hey, I&#39;m your ReproDude for this chapter. If you have any questions click on me and we can talk!&quot;</span>)</span>
-<span id="cb1-4"><a href="dynamic-documents.html#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="dynamic-documents.html#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(reprodude2)</span></code></pre></div>
-<pre><code>## 
-## &lt;div class=&quot;infoboxgpt&quot; onclick=&quot;window.open(https://chat.openai.com/share/e4dfb501-b17b-40ee-a35c-20cda449fbff, &#39;_blank&#39;)&quot;&gt;
-##   &lt;h2 class=&quot;infobox-titlegpt&quot;&gt;ReproDude&lt;/h2&gt;
-##   &lt;p class=&quot;infobox-contentgpt&quot;&gt;Hey, I&#39;m your ReproDude for this chapter. If you have any questions click on me and we can talk!&lt;/p&gt;
-## &lt;/div&gt;
-## </code></pre>
+<div class="infoboxgpt" onclick="window.open(https://chat.openai.com/share/e4dfb501-b17b-40ee-a35c-20cda449fbff, &#39;_blank&#39;)">
+<h2 class="infobox-titlegpt">
+ReproDude
+</h2>
+<p class="infobox-contentgpt">
+Hey, I’m your ReproDude for this chapter. If you have any questions click on me and we can talk!
+</p>
+</div>
 <div style="clear: both;">
 
 </div>
@@ -214,6 +222,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>What do I see before me?<a href="dynamic-documents.html#what-do-i-see-before-me" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>First of all:</p>
 <p><span style="color:green"> Look around, become comfortable. Then, locate the files pane.</span></p>
+<p>You are currently at your computer using Posit Cloud which hosts an R environment that you are looking at.</p>
 <p>Do you feel comfortable yet? Yes? Then let’s move on.
 If not, take as much time as you need and move on as soon as you want, I have no more Appointments today.</p>
 </div>
@@ -249,11 +258,152 @@ Let’s make another list:</p>
 </ol>
 <p>Great, now you’ve already finished the necessary!
 You want to go straight on?
-Let’s take a look at the extended goal first.</p>
+Let’s take a look at the extended Goals first.</p>
+</div>
+</div>
+<div id="extended-goals" class="section level2 unnumbered hasAnchor">
+<h2>Extended Goals?<a href="dynamic-documents.html#extended-goals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="figure">
 <img src="Overview.png" alt="" />
 <p class="caption">Overview of the extended goal.</p>
 </div>
+<p>So, did I confuse you with that?
+Don’t worry, we’re in this together.
+What components do we need to get closer to reproducibility?</p>
+<p>code + data + text + history + software + workflow</p>
+<p>But we have already looked at something.
+Was that already part of the overall picture?
+Yes!</p>
+<p><span style="color:orange">code + data</span> + text + history + software + workflow</p>
+<p>We have already dealt with code and data, so next is text.
+Let’s look again at the problems we need to solve:</p>
+<ol style="list-style-type: decimal">
+<li>copy&amp;paste mistakes</li>
+<li>inconsistent versions of code or data</li>
+<li>missing or incompatible software</li>
+<li>complicated or ambiguous procedure for reproduction</li>
+</ol>
+<p>And the solution software:</p>
+<ol style="list-style-type: decimal">
+<li>RMarkdown</li>
+<li>Git</li>
+<li>Docker</li>
+<li>Make</li>
+</ol>
+<p>That is, the component text has the problem of copy&amp;paste mistakes and we use RMarkdown to solve the problem.</p>
+</div>
+<div id="rmarkdown" class="section level2 unnumbered hasAnchor">
+<h2>RMarkdown<a href="dynamic-documents.html#rmarkdown" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Now let’s go back to your environment.</p>
+<p><span style="color:green">Open the file</span><span style="color:orange">inflation.Rmd.</span></p>
+<p>If you are still in the R folder, you have to go up one level again.</p>
+<p><span style="color:green">Take a minute to skim the document.</span></p>
+<p>Or even two.</p>
+<p><span style="color:green">Click on </span><span style="color:orange">knit.</span></p>
+<p><span style="color:blue">And if you want to admire more examples, click on </span><span style="color:orange"><a href="https://rmarkdown.rstudio.com/gallery.html">RMarkdown Gallery</a>.</span></p>
+<div id="metadata-yaml" class="section level3 unnumbered hasAnchor">
+<h3>Metadata (YAML)<a href="dynamic-documents.html#metadata-yaml" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Now that you have looked at at least one RMarkdown example, did you notice the following part:</p>
+<pre><code>---
+title: &quot;Inflation Data&quot;
+author: &quot;Aaron Peikert&quot;
+date: &quot;2023-06-07&quot;
+output: html_document
+repro:
+  packages:
+    - here
+    - tidyverse
+    - lubridate
+    - aaronpeikert/repro@fc7e884
+  scripts:
+    - R/prepare_inflation.R
+  data:
+    - data/raw/inflation.rds
+---</code></pre>
+<p>This is the metadata, in YAML format, for the RMarkdown document.</p>
+<p><span style="color:green">Change <span style="color:orange">html_document </span> to <span style="color:orange">pdf_document </span></span></p>
+<p><span style="color:green">Knit again.</span></p>
+<p>What happened?
+You want to experiment more?</p>
+<p><span style="color:blue">Change the author or date field.</span>
+<span style="color:blue">Try the <span style="color:orange"><a href="https://rstudio.github.io/tufte/">tufte-format (click me)</a>.</span></span></p>
+</div>
+<div id="text-markdown" class="section level3 unnumbered hasAnchor">
+<h3>Text (markdown)<a href="dynamic-documents.html#text-markdown" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In the document, you probably also noticed this part:</p>
+<pre><code>The dataset we use stems from the [Bank of England Research datasets](https://www.bankofengland.co.uk/statistics/research-datasets).
+
+I quote:
+
+&gt; This dataset contains the individual responses to our Inflation Attitudes Survey, a quarterly survey of people’s feelings about inflation and other economic variables like the interest rate. </code></pre>
+<p>This is markdown and we use it to write and format the actual text.</p>
+<p><span style="color:green">Make something <strong>bold</strong> and something else <em>italic</em>:</span></p>
+<pre><code>This is **bold**, while this is *italic*.</code></pre>
+<p><span style="color:blue">Go to <span style="color:orange">Help → Markdown Quick Reference</span> and try something out.</span></p>
+</div>
+<div id="code-r" class="section level3 unnumbered hasAnchor">
+<h3>Code (R)<a href="dynamic-documents.html#code-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>But there is another component in the document.
+This part are code blocks like:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="dynamic-documents.html#cb4-1" aria-hidden="true" tabindex="-1"></a>inflation <span class="sc">%&gt;%</span> </span>
+<span id="cb4-2"><a href="dynamic-documents.html#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(date) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-3"><a href="dynamic-documents.html#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="fu">across</span>(<span class="fu">c</span>(perception, expectation),</span>
+<span id="cb4-4"><a href="dynamic-documents.html#cb4-4" aria-hidden="true" tabindex="-1"></a>                   <span class="sc">~</span> <span class="fu">mean</span>(., <span class="at">na.rm =</span> <span class="cn">TRUE</span>)),</span>
+<span id="cb4-5"><a href="dynamic-documents.html#cb4-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">.groups =</span> <span class="st">&quot;drop&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-6"><a href="dynamic-documents.html#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="fu">c</span>(expectation, perception)) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-7"><a href="dynamic-documents.html#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb4-8"><a href="dynamic-documents.html#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb4-9"><a href="dynamic-documents.html#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(date, value, <span class="at">color =</span> name)) <span class="sc">+</span></span>
+<span id="cb4-10"><a href="dynamic-documents.html#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="cn">NULL</span></span></code></pre></div>
+<p>These code blocks can be not only R code but also Julia, Python, Octave and other programming languages.</p>
+<p><span style="color:green">Add a code chunk (Ctrl + Alt + I) and inline code:</span></p>
+<!-- Bad solution, somethin better? -->
+<div class="sourceCode" id="cb5"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb5-1"><a href="dynamic-documents.html#cb5-1" aria-hidden="true" tabindex="-1"></a>A code chunk is for longer code/output:</span>
+<span id="cb5-2"><a href="dynamic-documents.html#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="dynamic-documents.html#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="dynamic-documents.html#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
+<span id="cb5-5"><a href="dynamic-documents.html#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">with</span>(mtcars, <span class="fu">plot</span>(hp, mpg))</span>
+<span id="cb5-6"><a href="dynamic-documents.html#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-7"><a href="dynamic-documents.html#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="dynamic-documents.html#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;_main_files/figure-html/unnamed-chunk-5-1.png&quot;</span> <span class="er">width</span><span class="ot">=</span><span class="st">&quot;672&quot;</span> <span class="kw">/&gt;</span></span>
+<span id="cb5-9"><a href="dynamic-documents.html#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="dynamic-documents.html#cb5-10" aria-hidden="true" tabindex="-1"></a>Inline code is for single numbers/short text:</span>
+<span id="cb5-11"><a href="dynamic-documents.html#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="dynamic-documents.html#cb5-12" aria-hidden="true" tabindex="-1"></a>We have 32 cars.</span></code></pre></div>
+<p><span style="color:blue">Include all the code in output with: <span style="color:orange">knitr::opts_chunk$set(echo = TRUE)</span></span></p>
+<p><span style="color:blue">Try using python:</span></p>
+<!-- Bad solution, somethin better? -->
+<div class="sourceCode" id="cb6"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb6-1"><a href="dynamic-documents.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-2"><a href="dynamic-documents.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="in">print(&quot;Hi! Python here, do you miss R already?&quot;)</span></span>
+<span id="cb6-3"><a href="dynamic-documents.html#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
+</div>
+</div>
+<div id="and-now" class="section level2 unnumbered hasAnchor">
+<h2>And now?<a href="dynamic-documents.html#and-now" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Congratulations, another section done!</p>
+<p>Before we continue, let’s take a quick look together at what we have just done.
+We have now one component more in our toolbox.</p>
+<p><span style="color:orange">code + data</span> + text + history + software + workflow</p>
+<p>And with that we solved our first Problem on the list:</p>
+<ol style="list-style-type: decimal">
+<li><del>copy&amp;paste mistakes</del></li>
+<li>inconsistent versions of code or data</li>
+<li>missing or incompatible software</li>
+<li>complicated or ambiguous procedure for reproduction</li>
+</ol>
+<p>And which software did we just use for this:</p>
+<ol style="list-style-type: decimal">
+<li><span style="color:orange">RMarkdown</span></li>
+<li>Git</li>
+<li>Docker</li>
+<li>Make</li>
+</ol>
+<div id="final-step-1" class="section level3 unnumbered hasAnchor">
+<h3>Final Step<a href="dynamic-documents.html#final-step-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Now please go through what we have just done and all the software we use.</p>
+<p>You are currently at your computer using Posit Cloud which hosts an R environment where you used RMarkdown to write some examples.</p>
+<p>But that was it for this section.
+Shall we both take a short break or do you want to continue straight away?</p>
 
 </div>
 </div>
