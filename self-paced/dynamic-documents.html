@@ -153,6 +153,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html#what-does-self-paced-mean"><i class="fa fa-check"></i>What does self-paced mean?</a></li>
 <li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html#what-are-infoboxes"><i class="fa fa-check"></i>What are infoboxes?</a></li>
 <li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html#what-else-should-i-know-before-i-start"><i class="fa fa-check"></i>What else should i know before I start?</a></li>
+<li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html#questions-comments-notes"><i class="fa fa-check"></i>Questions? Comments? Notes?</a></li>
 <li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html#setup"><i class="fa fa-check"></i>Setup!</a>
 <ul>
 <li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html#github"><i class="fa fa-check"></i>GitHub</a></li>
@@ -161,7 +162,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html#final-step"><i class="fa fa-check"></i>Final Step</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="dynamic-documents.html"><a href="dynamic-documents.html"><i class="fa fa-check"></i>Dynamic Documents</a></li>
+<li class="chapter" data-level="" data-path="dynamic-documents.html"><a href="dynamic-documents.html"><i class="fa fa-check"></i>Dynamic Documents</a>
+<ul>
+<li class="chapter" data-level="" data-path="dynamic-documents.html"><a href="dynamic-documents.html#what-do-i-see-before-me"><i class="fa fa-check"></i>What do I see before me?</a></li>
+<li class="chapter" data-level="" data-path="dynamic-documents.html"><a href="dynamic-documents.html#best-practices"><i class="fa fa-check"></i>Best practices?</a>
+<ul>
+<li class="chapter" data-level="" data-path="dynamic-documents.html"><a href="dynamic-documents.html#a-summary"><i class="fa fa-check"></i>A summary?</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="version-control.html"><a href="version-control.html"><i class="fa fa-check"></i>Version Control</a></li>
 <li class="chapter" data-level="" data-path="software-management.html"><a href="software-management.html"><i class="fa fa-check"></i>Software Management</a></li>
 <li class="chapter" data-level="" data-path="workflow-orchestration.html"><a href="workflow-orchestration.html"><i class="fa fa-check"></i>Workflow Orchestration</a></li>
@@ -188,7 +196,67 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="dynamic-documents" class="section level1 unnumbered hasAnchor">
 <h1>Dynamic Documents<a href="dynamic-documents.html#dynamic-documents" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="dynamic-documents.html#cb1-1" aria-hidden="true" tabindex="-1"></a>reprodude2 <span class="ot">&lt;-</span> <span class="fu">generate_reprodudes</span>(links<span class="sc">$</span>reprodudes<span class="sc">$</span>two,</span>
+<span id="cb1-2"><a href="dynamic-documents.html#cb1-2" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">&quot;ReproDude&quot;</span>,</span>
+<span id="cb1-3"><a href="dynamic-documents.html#cb1-3" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">&quot;Hey, I&#39;m your ReproDude for this chapter. If you have any questions click on me and we can talk!&quot;</span>)</span>
+<span id="cb1-4"><a href="dynamic-documents.html#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="dynamic-documents.html#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(reprodude2)</span></code></pre></div>
+<pre><code>## 
+## &lt;div class=&quot;infoboxgpt&quot; onclick=&quot;window.open(https://chat.openai.com/share/e4dfb501-b17b-40ee-a35c-20cda449fbff, &#39;_blank&#39;)&quot;&gt;
+##   &lt;h2 class=&quot;infobox-titlegpt&quot;&gt;ReproDude&lt;/h2&gt;
+##   &lt;p class=&quot;infobox-contentgpt&quot;&gt;Hey, I&#39;m your ReproDude for this chapter. If you have any questions click on me and we can talk!&lt;/p&gt;
+## &lt;/div&gt;
+## </code></pre>
+<div style="clear: both;">
 
+</div>
+<div id="what-do-i-see-before-me" class="section level2 unnumbered hasAnchor">
+<h2>What do I see before me?<a href="dynamic-documents.html#what-do-i-see-before-me" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>First of all:</p>
+<p><span style="color:green"> Look around, become comfortable. Then, locate the files pane.</span></p>
+<p>Do you feel comfortable yet? Yes? Then let’s move on.
+If not, take as much time as you need and move on as soon as you want, I have no more Appointments today.</p>
+</div>
+<div id="best-practices" class="section level2 unnumbered hasAnchor">
+<h2>Best practices?<a href="dynamic-documents.html#best-practices" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To give you a sense of how reproducibility can be increased, i will show you some best practices:</p>
+<p><span style="color:green"> Open the R folder.</span></p>
+<p>You should now see three different R files.</p>
+<p><span style="color:green"> Click on the file </span><span style="color:orange">R/prepare_games.R </span></p>
+<p>Now try to understand the code.
+Which of these do you already do?
+What could you improve?
+You want to see more?
+Because it’s you (same thing but more complicated):</p>
+<p><span style="color:green"> Take a look at </span><span style="color:orange">R/prepare_inflation </span></p>
+<div id="a-summary" class="section level3 unnumbered hasAnchor">
+<h3>A summary?<a href="dynamic-documents.html#a-summary" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>To summarize this in an incomplete list:</p>
+<ol style="list-style-type: decimal">
+<li>List requirements early</li>
+<li>Use relative locations</li>
+<li>Document relevant information</li>
+</ol>
+<p>Let’s talk about the last point.
+Does that mean that every piece of documentation has to be a mile long?</p>
+<p>No…. not necessarily.</p>
+<p>But how do I decide what should or should not be included in my documentation?
+Let’s make another list:</p>
+<ol style="list-style-type: decimal">
+<li>What is <em>standard</em> does not have to be documented.</li>
+<li>What is <em>easy</em> needs only little documentation.</li>
+<li>What is <em>consistent</em> only has to be documented once.</li>
+</ol>
+<p>Great, now you’ve already finished the necessary!
+You want to go straight on?
+Let’s take a look at the extended goal first.</p>
+<div class="figure">
+<img src="Overview.png" alt="" />
+<p class="caption">Overview of the extended goal.</p>
+</div>
+
+</div>
+</div>
 </div>
             </section>
 
@@ -250,20 +318,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>
