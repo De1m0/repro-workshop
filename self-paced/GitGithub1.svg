@@ -27,9 +27,25 @@
     <g transform="translate(-0.5 -0.5)"/>
     <g transform="translate(-0.5 -0.5)"/>
     <g transform="translate(-0.5 -0.5)"/>
+    <rect x="269.188" y="403.284" width="63" height="22" rx="3.3" ry="3.3" fill="#e6e6e6" stroke="#404040" stroke-width="2" pointer-events="all"/>
+    <rect x="431.188" y="403.284" width="63" height="22" rx="3.3" ry="3.3" fill="#e6e6e6" stroke="#404040" stroke-width="2" pointer-events="all"/>
   </g>
   <text style="fill: rgb(51, 51, 51); font-family: &quot;Times New Roman&quot;; font-size: 21px; font-weight: 700; white-space: pre;" x="183.351" y="315.779">main</text>
   <text style="fill: rgb(51, 51, 51); font-family: &quot;Times New Roman&quot;; font-size: 12px; line-height: 42.6113px; white-space: pre;" x="361.458" y="346.931">Version 1</text>
   <text style="fill: rgb(51, 51, 51); font-family: &quot;Times New Roman&quot;; font-size: 12px; line-height: 42.6113px; white-space: pre;" x="523.384" y="346.987">Version 2</text>
-  <text style="fill: rgb(51, 51, 51); font-family: &quot;Times New Roman&quot;; font-size: 12px; line-height: 42.6113px; white-space: pre;" x="765.512" y="346.726">Current</text>
+  <text style="fill: rgb(51, 51, 51); font-family: &quot;Times New Roman&quot;; font-size: 12px; line-height: 42.6113px; white-space: pre;" x="765.512" y="345.907">Current</text>
+  <rect x="125.06" y="451.348" width="160" height="39" stroke-width="2" pointer-events="all" style="fill: rgb(23, 21, 21); stroke: rgb(23, 21, 21);"/>
+  <text style="fill: rgb(255, 255, 255); font-family: &quot;Times New Roman&quot;; font-size: 21px; font-weight: 700; white-space: pre;" x="170.721" y="477.587">GitHub</text>
+  <path d="M 398.155 468.55 L 530.155 468.55" fill="none" stroke-width="4" stroke-miterlimit="10" pointer-events="stroke" style="stroke: rgb(23, 21, 21);"/>
+  <ellipse cx="383.155" cy="468.55" rx="15" ry="15" stroke-width="4" pointer-events="all" style="fill: rgb(23, 21, 21); stroke: rgb(23, 21, 21);"/>
+  <ellipse cx="783.035" cy="468.55" rx="15" ry="15" stroke-width="4" pointer-events="all" style="fill: rgb(23, 21, 21); stroke: rgb(23, 21, 21);"/>
+  <path d="M 303.035 468.55 L 368.155 468.55" fill="none" stroke-width="4" stroke-miterlimit="10" pointer-events="stroke" style="stroke: rgb(23, 21, 21);"/>
+  <path d="M 628.035 468.55 L 768.035 468.55" fill="none" stroke-width="4" stroke-miterlimit="10" pointer-events="stroke" style="stroke: rgb(23, 21, 21);"/>
+  <ellipse cx="545.155" cy="468.55" rx="15" ry="15" stroke-width="4" pointer-events="all" style="fill: rgb(23, 21, 21); stroke: rgb(23, 21, 21);"/>
+  <rect x="751.535" y="492.55" width="63" height="22" rx="3.3" ry="3.3" fill="#e6e6e6" stroke="#404040" stroke-width="2" pointer-events="all"/>
+  <path d="M 560.155 468.55 L 628.225 468.55" fill="none" stroke-width="4" stroke-miterlimit="10" pointer-events="stroke" style="stroke: rgb(23, 21, 21);"/>
+  <path d="M 798.035 468.55 C 798.035 468.55 905.463 468.55 1120.32 468.55" fill="none" stroke-width="4" stroke-miterlimit="10" pointer-events="stroke" style="stroke: rgb(23, 21, 21);"/>
+  <text style="fill: rgb(51, 51, 51); font-family: &quot;Times New Roman&quot;; font-size: 12px; line-height: 42.6113px; white-space: pre;" x="360.537" y="506.884">Version 1</text>
+  <text style="fill: rgb(51, 51, 51); font-family: &quot;Times New Roman&quot;; font-size: 12px; line-height: 42.6113px; white-space: pre;" x="522.463" y="506.94">Version 2</text>
+  <text style="fill: rgb(51, 51, 51); font-family: &quot;Times New Roman&quot;; font-size: 12px; line-height: 42.6113px; white-space: pre;" x="764.591" y="505.86">Current</text>
 </svg>

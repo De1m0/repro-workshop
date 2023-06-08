@@ -188,6 +188,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="version-control.html"><a href="version-control.html#hands-on"><i class="fa fa-check"></i>Hands on</a></li>
 </ul></li>
+<li class="chapter" data-level="" data-path="version-control.html"><a href="version-control.html#and-now-1"><i class="fa fa-check"></i>And now?</a>
+<ul>
+<li class="chapter" data-level="" data-path="version-control.html"><a href="version-control.html#final-step-2"><i class="fa fa-check"></i>Final Step</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="software-management.html"><a href="software-management.html"><i class="fa fa-check"></i>Software Management</a></li>
 <li class="chapter" data-level="" data-path="workflow-orchestration.html"><a href="workflow-orchestration.html"><i class="fa fa-check"></i>Workflow Orchestration</a></li>
@@ -249,9 +253,9 @@ What’s next?</p>
 <div id="git" class="section level2 unnumbered hasAnchor">
 <h2>Git<a href="version-control.html#git" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
-<img src="Git%20Diagram.svg" alt="My SVG Picture"  />
+<img src="Git%20Diagram.svg" alt="Git Overview"  />
 <p class="caption">
-Figure 1: My SVG Picture
+Figure 1: Git Overview
 </p>
 </div>
 <p>Git is an amazing tool that helps you keep track of changes in your project, just like having a magical time machine for your work.
@@ -267,14 +271,6 @@ Git
 </h2>
 <p class="infobox-content">
 I will lead you to a cheat sheet for git, how likes remembering?
-</p>
-</div>
-<div class="infoboxgpt" onclick="window.open(&#39;&#39;, &#39;_blank&#39;)">
-<h2 class="infobox-titlegpt">
-ReproDude
-</h2>
-<p class="infobox-contentgpt">
-Hey, I’m your ReproDude just for Git, so ask me Git things.
 </p>
 </div>
 <!-- so that there is no text between the Boxes-->
@@ -299,12 +295,13 @@ usethis::use_git_config(
   init.defaultBranch = &quot;main&quot;) # &lt;-- not necessary but kinder than &#39;master&#39;</code></pre>
 <p>You will need to do this <em>once per project</em>.</p>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-8"></span>
-<img src="Git1.svg" alt="My SVG Picture"  />
+<img src="Git1.svg" alt="Your current position"  />
 <p class="caption">
-Figure 2: My SVG Picture
+Figure 2: Your current position
 </p>
 </div>
-<p>You have now built the git, our time machine, for your project.
+<p>You have now initialized Git, our time machine, for your project.
+As you can see in figure two, you are on the position called Current and Git has saved Version 1, which has no changes to your current point.
 But we can’t travel to another time yet, because we are in the first version and there is no history from Git’s point of view.</p>
 <div id="make-history" class="section level4 unnumbered hasAnchor">
 <h4>Make history<a href="version-control.html#make-history" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -323,26 +320,99 @@ Remember, we are currently in <span style="color:orange">inflation.rmd</span>.</
 Can we now just jump back and forth between now and the start, like a time machine should be?</p>
 <p>Almost. We need to tell Git beforehand that the current state should become a new point in time.
 In Git, we cannot travel freely in time, but only between time points we set.</p>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-9"></span>
-<img src="Git2.svg" alt="My SVG Picture"  />
-<p class="caption">
-Figure 3: My SVG Picture
-</p>
-</div>
 <p>This is exactly the kind of point in time we are setting now through Git commits.</p>
 <p><span style="color:green">Create a commit:</span>
 Git pane → Click checkbox of changed files → Commit → Message → Commit
 [Note: The Git pane is usually in the same window as the environment variables.]</p>
 <p><span style="color:blue">What can you do when you delete a file by accident?</span></p>
 <p><span style="color:blue">Can Git help when you loose your computer / access to Posit Cloud?</span></p>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-10"></span>
-<img src="Git3.svg" alt="My SVG Picture"  />
+<p>Now we have performed our first commit!
+What does our Git history look like now?</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-9"></span>
+<img src="Git2.svg" alt="Your current position"  />
 <p class="caption">
-Figure 4: My SVG Picture
+Figure 3: Your current position
 </p>
 </div>
-
+<p>I see.
+So now we have created a second version that is our modified code and saved it as a point in time.
+And our Current position is identical to version 2 but different from version 1 (we have changed the plot).</p>
+<p>But so far everything is only local, if I try to contribute to your code from the other side of the world it won’t work, because I don’t have direct access to your local git version.</p>
+<p>So to provide remote access for you, me, and anyone else you like or at least collaborate with, we use GitHub.</p>
 </div>
+<div id="github-1" class="section level4 unnumbered hasAnchor">
+<h4>GitHub<a href="version-control.html#github-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>GitHub is like a virtual space where you can save and share your code with others.
+It makes working with Git easy and accessible, allowing you to collaborate with teammates, track changes, and keep your code safe in one place online.
+Let us Introduce our-self to GitHub.</p>
+<p><span style="color:green">To get a GitHub pat/token run:</span></p>
+<pre><code>usethis::create_github_token(description = Token for Repro Workshop 2023 Test)</code></pre>
+<p><span style="color:green">Activate scope <span style="color:orange">write:packages.</span></span></p>
+<p><span style="color:green">Modify expiration. Today is enough.</span></p>
+<p><span style="color:green">Copy token.</span></p>
+<p>You will need to do this <em>once for each computing environment</em>.</p>
+<p>Now we need to store this Token, it is like our Passport for entering the GitHub Country.</p>
+<p><span style="color:green">Set token:</span></p>
+<pre><code>gitcreds::gitcreds_set() # &lt;-- Token must *not* go into brackets, paste when asked</code></pre>
+<p><span style="color:blue">Verify that everything is in order:</span></p>
+<pre><code>usethis::gh_token_help()</code></pre>
+<p>You will need to do this <em>once for each computing environment</em>.</p>
+<p>And what have we done now?</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-10"></span>
+<img src="GitGithub0.svg" alt="GitHub status"  />
+<p class="caption">
+Figure 4: GitHub status
+</p>
+</div>
+<p>So far we have only authenticated, so we are allowed to enter GitHub land, but we haven’t sent anything there yet.</p>
+<p>[Hint: If pushing code fails or asks for the password, we have triggered spam detection. In this case, we will have to repeat the GitHub handshake.]</p>
+<p>Now let’s use GitHub!</p>
+<p><span style="color:green">To activate GitHub and upload your files to the public web:</span></p>
+<pre><code>usethis::use_github()</code></pre>
+<p><span style="color:blue">Private alternative/ upload to non-public web (don’t use now):</span></p>
+<pre><code>usethis::use_github(private = TRUE)</code></pre>
+<p><span style="color:blue">Can you simply use code from others that you find on GitHub?</span></p>
+<p><span style="color:blue">Try <span style="color:orange">usethis::use_mit_license()</span></span></p>
+<p><span style="color:blue">Up for a challenge? Try <span style="color:orange">usethis::use_readme_rmd()</span></span></p>
+<p>That’s it!
+And what does our stand look like now?</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-11"></span>
+<img src="GitGithub1.svg" alt="GitHub status"  />
+<p class="caption">
+Figure 5: GitHub status
+</p>
+</div>
+<p>As seen in figure 5, we now have an identical copy of our Git history on GitHub as well!</p>
+</div>
+</div>
+</div>
+<div id="and-now-1" class="section level2 unnumbered hasAnchor">
+<h2>And now?<a href="version-control.html#and-now-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Congratulations, another section done!</p>
+<p>Before we continue, let’s take a quick look together at what we have just done.
+We have now one component more in our toolbox.</p>
+<p><span style="color:orange">code + data + text + history</span> + software + workflow</p>
+<p>And with that we solved our second Problem on the list:</p>
+<ol style="list-style-type: decimal">
+<li><del>copy&amp;paste mistakes</del></li>
+<li><del>inconsistent versions of code or data</del></li>
+<li>missing or incompatible software</li>
+<li>complicated or ambiguous procedure for reproduction</li>
+</ol>
+<p>And which software did we just use for this:</p>
+<ol style="list-style-type: decimal">
+<li>RMarkdown</li>
+<li><span style="color:orange">Git</span></li>
+<li>Docker</li>
+<li>Make</li>
+</ol>
+<div id="final-step-2" class="section level3 unnumbered hasAnchor">
+<h3>Final Step<a href="version-control.html#final-step-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Now please go through what we have just done and all the software we use.</p>
+<p>You are currently at your computer using Posit Cloud which hosts an R environment where you used Git to create a traceable History with Git and saved it online with GitHub.</p>
+<p>But that was it for this section.
+Shall we both take a short break or do you want to continue straight away?</p>
+
 </div>
 </div>
 </div>
