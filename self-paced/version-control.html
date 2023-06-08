@@ -181,7 +181,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="dynamic-documents.html"><a href="dynamic-documents.html#final-step-1"><i class="fa fa-check"></i>Final Step</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="version-control.html"><a href="version-control.html"><i class="fa fa-check"></i>Version Control</a></li>
+<li class="chapter" data-level="" data-path="version-control.html"><a href="version-control.html"><i class="fa fa-check"></i>Version Control</a>
+<ul>
+<li class="chapter" data-level="" data-path="version-control.html"><a href="version-control.html#what-now"><i class="fa fa-check"></i>What now?</a></li>
+<li class="chapter" data-level="" data-path="version-control.html"><a href="version-control.html#git"><i class="fa fa-check"></i>Git</a>
+<ul>
+<li class="chapter" data-level="" data-path="version-control.html"><a href="version-control.html#hands-on"><i class="fa fa-check"></i>Hands on</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="software-management.html"><a href="software-management.html"><i class="fa fa-check"></i>Software Management</a></li>
 <li class="chapter" data-level="" data-path="workflow-orchestration.html"><a href="workflow-orchestration.html"><i class="fa fa-check"></i>Workflow Orchestration</a></li>
 <li class="chapter" data-level="" data-path="before-you-go.html"><a href="before-you-go.html"><i class="fa fa-check"></i>Before you go</a></li>
@@ -207,7 +214,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="version-control" class="section level1 unnumbered hasAnchor">
 <h1>Version Control<a href="version-control.html#version-control" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div class="infoboxgpt" onclick="window.open(https://chat.openai.com/share/e4dfb501-b17b-40ee-a35c-20cda449fbff, &#39;_blank&#39;)">
+<div class="infoboxgpt" onclick="window.open(&#39;https://chat.openai.com/share/e4dfb501-b17b-40ee-a35c-20cda449fbff&#39;, &#39;_blank&#39;)">
 <h2 class="infobox-titlegpt">
 ReproDude
 </h2>
@@ -215,7 +222,129 @@ ReproDude
 Hey, I’m your ReproDude for this chapter. If you have any questions click on me and we can talk!
 </p>
 </div>
+<div id="what-now" class="section level2 unnumbered hasAnchor">
+<h2>What now?<a href="version-control.html#what-now" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Let’s get on with it then!
+What’s next?</p>
+<p>let’s take another look at our components, which ones are we examining now?</p>
+<p>code + data + text + <span style="color:orange">history</span> + software + workflow</p>
+<p>History? Maybe a look at our problem and software solution list will help to shed some light on the matter.</p>
+<p>Problem list:</p>
+<ol style="list-style-type: decimal">
+<li><del>copy&amp;paste mistakes</del></li>
+<li><span style="color:orange">inconsistent versions of code or data</span></li>
+<li>missing or incompatible software</li>
+<li>complicated or ambiguous procedure for reproduction</li>
+</ol>
+<p>Software solution list:</p>
+<ol style="list-style-type: decimal">
+<li>RMarkdown</li>
+<li><span style="color:orange">Git</span></li>
+<li>Docker</li>
+<li>Make</li>
+</ol>
+<p>So that means we use the Git (and Github) to avoid the problem of inconsistent versions of code and data?</p>
+<p>That sounds good, let’s get started right away!</p>
+</div>
+<div id="git" class="section level2 unnumbered hasAnchor">
+<h2>Git<a href="version-control.html#git" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
+<img src="Git%20Diagram.svg" alt="My SVG Picture"  />
+<p class="caption">
+Figure 1: My SVG Picture
+</p>
+</div>
+<p>Git is an amazing tool that helps you keep track of changes in your project, just like having a magical time machine for your work.
+It’s like having a superpower for managing files and projects, especially when you’re coding, although it can be used for any type of project that involves files.</p>
+<p>Imagine you have a project, and it’s like a journey represented by a single line called the ‘main’ branch.
+Each point along this line is a different version of your project, capturing the moments when you’ve made changes and saved them (committed them).
+It’s like preserving snapshots of your progress, allowing you to travel back in time and see how your project evolved.</p>
+<div id="hands-on" class="section level3 unnumbered hasAnchor">
+<h3>Hands on<a href="version-control.html#hands-on" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="infobox" onclick="window.open(&#39;https://education.github.com/git-cheat-sheet-education.pdf&#39;, &#39;_blank&#39;)">
+<h2 class="infobox-title">
+Git
+</h2>
+<p class="infobox-content">
+I will lead you to a cheat sheet for git, how likes remembering?
+</p>
+</div>
+<div class="infoboxgpt" onclick="window.open(&#39;&#39;, &#39;_blank&#39;)">
+<h2 class="infobox-titlegpt">
+ReproDude
+</h2>
+<p class="infobox-contentgpt">
+Hey, I’m your ReproDude just for Git, so ask me Git things.
+</p>
+</div>
+<!-- so that there is no text between the Boxes-->
+<div style="clear: both;">
 
+</div>
+<p>Now that we’ve cleared that up, let’s get back to the code.</p>
+<p><span style="color:orange">Modify this code and run it:</span></p>
+<pre><code># use a function without loading the package
+# package::function
+usethis::use_git_config(
+  user.name = &quot;Jane Doe&quot;, # &lt;-- change to your name
+  user.email = &quot;jane@example.org&quot;, # &lt;-- and your email
+  init.defaultBranch = &quot;main&quot;) # &lt;-- not necessary but kinder than &#39;master&#39;</code></pre>
+<p>You will need to do this <em>once for each computing environment</em>.</p>
+<p>Let us now activate Git.</p>
+<pre><code># use a function without loading the package
+# package::function
+usethis::use_git_config(
+  user.name = &quot;Jane Doe&quot;,
+  user.email = &quot;jane@example.org&quot;,
+  init.defaultBranch = &quot;main&quot;) # &lt;-- not necessary but kinder than &#39;master&#39;</code></pre>
+<p>You will need to do this <em>once per project</em>.</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-8"></span>
+<img src="Git1.svg" alt="My SVG Picture"  />
+<p class="caption">
+Figure 2: My SVG Picture
+</p>
+</div>
+<p>You have now built the git, our time machine, for your project.
+But we can’t travel to another time yet, because we are in the first version and there is no history from Git’s point of view.</p>
+<div id="make-history" class="section level4 unnumbered hasAnchor">
+<h4>Make history<a href="version-control.html#make-history" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Let’s make history then.
+To do that we need to change something in the document.
+How about the plot in the code?
+Remember, we are currently in <span style="color:orange">inflation.rmd</span>.</p>
+<p><span style="color:green">The plot is <del>ugly</del> very functional. Beautify it a bit. Some suggestions:</span></p>
+<pre><code>  theme_minimal() +
+  ylab(&quot;subjective inflation in %-points&quot;) +
+  labs(color = &quot;&quot;) +
+  theme(legend.position = c(.1, .9)) +</code></pre>
+<p><span style="color:blue">Plot the the two or five year expectation.</span></p>
+<p>[Hint: Swapping the variable <span style="color:orange">E1y_all</span> in <span style="color:orange">R/prepare_inflation.R</span> should to the trick.]</p>
+<p>Great, now we have changed something!
+Can we now just jump back and forth between now and the start, like a time machine should be?</p>
+<p>Almost. We need to tell Git beforehand that the current state should become a new point in time.
+In Git, we cannot travel freely in time, but only between time points we set.</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-9"></span>
+<img src="Git2.svg" alt="My SVG Picture"  />
+<p class="caption">
+Figure 3: My SVG Picture
+</p>
+</div>
+<p>This is exactly the kind of point in time we are setting now through Git commits.</p>
+<p><span style="color:green">Create a commit:</span>
+Git pane → Click checkbox of changed files → Commit → Message → Commit
+[Note: The Git pane is usually in the same window as the environment variables.]</p>
+<p><span style="color:blue">What can you do when you delete a file by accident?</span></p>
+<p><span style="color:blue">Can Git help when you loose your computer / access to Posit Cloud?</span></p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-10"></span>
+<img src="Git3.svg" alt="My SVG Picture"  />
+<p class="caption">
+Figure 4: My SVG Picture
+</p>
+</div>
+
+</div>
+</div>
+</div>
 </div>
             </section>
 

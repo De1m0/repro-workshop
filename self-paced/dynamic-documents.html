@@ -181,7 +181,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="dynamic-documents.html"><a href="dynamic-documents.html#final-step-1"><i class="fa fa-check"></i>Final Step</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="version-control.html"><a href="version-control.html"><i class="fa fa-check"></i>Version Control</a></li>
+<li class="chapter" data-level="" data-path="version-control.html"><a href="version-control.html"><i class="fa fa-check"></i>Version Control</a>
+<ul>
+<li class="chapter" data-level="" data-path="version-control.html"><a href="version-control.html#what-now"><i class="fa fa-check"></i>What now?</a></li>
+<li class="chapter" data-level="" data-path="version-control.html"><a href="version-control.html#git"><i class="fa fa-check"></i>Git</a>
+<ul>
+<li class="chapter" data-level="" data-path="version-control.html"><a href="version-control.html#hands-on"><i class="fa fa-check"></i>Hands on</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="software-management.html"><a href="software-management.html"><i class="fa fa-check"></i>Software Management</a></li>
 <li class="chapter" data-level="" data-path="workflow-orchestration.html"><a href="workflow-orchestration.html"><i class="fa fa-check"></i>Workflow Orchestration</a></li>
 <li class="chapter" data-level="" data-path="before-you-go.html"><a href="before-you-go.html"><i class="fa fa-check"></i>Before you go</a></li>
@@ -207,7 +214,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="dynamic-documents" class="section level1 unnumbered hasAnchor">
 <h1>Dynamic Documents<a href="dynamic-documents.html#dynamic-documents" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div class="infoboxgpt" onclick="window.open(https://chat.openai.com/share/a0720ed3-0fcf-43a6-bfea-d7d9deb2d067, &#39;_blank&#39;)">
+<div class="infoboxgpt" onclick="window.open(&#39;https://chat.openai.com/share/a0720ed3-0fcf-43a6-bfea-d7d9deb2d067&#39;, &#39;_blank&#39;)">
 <h2 class="infobox-titlegpt">
 ReproDude
 </h2>
@@ -294,6 +301,14 @@ Let’s look again at the problems we need to solve:</p>
 </div>
 <div id="rmarkdown" class="section level2 unnumbered hasAnchor">
 <h2>RMarkdown<a href="dynamic-documents.html#rmarkdown" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="infobox" onclick="window.open(&#39;https://rmarkdown.rstudio.com/&#39;, &#39;_blank&#39;)">
+<h2 class="infobox-title">
+RMarkdown
+</h2>
+<p class="infobox-content">
+I will give you more information about RMarkdown by taking you to their documentation.
+</p>
+</div>
 <p>Now let’s go back to your environment.</p>
 <p><span style="color:green">Open the file</span><span style="color:orange">inflation.Rmd.</span></p>
 <p>If you are still in the R folder, you have to go up one level again.</p>
@@ -345,16 +360,16 @@ I quote:
 <h3>Code (R)<a href="dynamic-documents.html#code-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>But there is another component in the document.
 This part are code blocks like:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="dynamic-documents.html#cb4-1" aria-hidden="true" tabindex="-1"></a>inflation <span class="sc">%&gt;%</span> </span>
-<span id="cb4-2"><a href="dynamic-documents.html#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(date) <span class="sc">%&gt;%</span> </span>
-<span id="cb4-3"><a href="dynamic-documents.html#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="fu">across</span>(<span class="fu">c</span>(perception, expectation),</span>
-<span id="cb4-4"><a href="dynamic-documents.html#cb4-4" aria-hidden="true" tabindex="-1"></a>                   <span class="sc">~</span> <span class="fu">mean</span>(., <span class="at">na.rm =</span> <span class="cn">TRUE</span>)),</span>
-<span id="cb4-5"><a href="dynamic-documents.html#cb4-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">.groups =</span> <span class="st">&quot;drop&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb4-6"><a href="dynamic-documents.html#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="fu">c</span>(expectation, perception)) <span class="sc">%&gt;%</span> </span>
-<span id="cb4-7"><a href="dynamic-documents.html#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb4-8"><a href="dynamic-documents.html#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb4-9"><a href="dynamic-documents.html#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(date, value, <span class="at">color =</span> name)) <span class="sc">+</span></span>
-<span id="cb4-10"><a href="dynamic-documents.html#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="cn">NULL</span></span></code></pre></div>
+<pre><code>inflation %&gt;% 
+  group_by(date) %&gt;% 
+  summarise(across(c(perception, expectation),
+                   ~ mean(., na.rm = TRUE)),
+            .groups = &quot;drop&quot;) %&gt;% 
+  pivot_longer(c(expectation, perception)) %&gt;% 
+  ungroup() %&gt;% 
+  ggplot() +
+  geom_line(aes(date, value, color = name)) +
+  NULL</code></pre>
 <p>These code blocks can be not only R code but also Julia, Python, Octave and other programming languages.</p>
 <p><span style="color:green">Add a code chunk (Ctrl + Alt + I) and inline code:</span></p>
 <!-- Bad solution, somethin better? -->
@@ -365,7 +380,7 @@ This part are code blocks like:</p>
 <span id="cb5-5"><a href="dynamic-documents.html#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">with</span>(mtcars, <span class="fu">plot</span>(hp, mpg))</span>
 <span id="cb5-6"><a href="dynamic-documents.html#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb5-7"><a href="dynamic-documents.html#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-8"><a href="dynamic-documents.html#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;_main_files/figure-html/unnamed-chunk-5-1.png&quot;</span> <span class="er">width</span><span class="ot">=</span><span class="st">&quot;672&quot;</span> <span class="kw">/&gt;</span></span>
+<span id="cb5-8"><a href="dynamic-documents.html#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;_main_files/figure-html/unnamed-chunk-4-1.png&quot;</span> <span class="er">width</span><span class="ot">=</span><span class="st">&quot;672&quot;</span> <span class="kw">/&gt;</span></span>
 <span id="cb5-9"><a href="dynamic-documents.html#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-10"><a href="dynamic-documents.html#cb5-10" aria-hidden="true" tabindex="-1"></a>Inline code is for single numbers/short text:</span>
 <span id="cb5-11"><a href="dynamic-documents.html#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
