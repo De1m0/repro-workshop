@@ -29,7 +29,7 @@ set in the _output.yml file.</p>" />
 <meta name="author" content="Aaron Peikert &amp; Hannes Diemerling" />
 
 
-<meta name="date" content="2023-06-08" />
+<meta name="date" content="2023-06-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -208,7 +208,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="workflow-orchestration.html"><a href="workflow-orchestration.html"><i class="fa fa-check"></i>Workflow Orchestration</a>
 <ul>
 <li class="chapter" data-level="" data-path="workflow-orchestration.html"><a href="workflow-orchestration.html#what-now-2"><i class="fa fa-check"></i>What now?</a></li>
-<li class="chapter" data-level="" data-path="workflow-orchestration.html"><a href="workflow-orchestration.html#make"><i class="fa fa-check"></i>Make?</a></li>
+<li class="chapter" data-level="" data-path="workflow-orchestration.html"><a href="workflow-orchestration.html#make"><i class="fa fa-check"></i>Make?</a>
+<ul>
+<li class="chapter" data-level="" data-path="workflow-orchestration.html"><a href="workflow-orchestration.html#hands-on-1"><i class="fa fa-check"></i>Hands on!</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="before-you-go.html"><a href="before-you-go.html"><i class="fa fa-check"></i>Before you go</a></li>
 <li class="divider"></li>
@@ -283,7 +286,53 @@ Let’s take a look at my favorite recipe.</p>
 <p>Arrabbiata sauce, or sugo all’arrabbiata in Italian, is a spicy <span style="color:orange">sauce</span> for <span style="color:orange">pasta</span> made from <span style="color:orange">garlic</span>, <span style="color:orange">tomatoes</span>, and dried red <span style="color:orange">chili</span> peppers cooked in olive oil.<br />
 <small>“Arrabbiata sauce” from Wikipedia under <a href="https://en.wikipedia.org/wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License"><span style="color:orange">CC BY-SA 3.0</span></a>, emphasis added</small></p>
 </blockquote>
+<p>Despite the beauty inherent in this recipe, we also want to formalize it.
+Let’s see how this recipe looks in a formalized version:
+<!--Python part wieder einfügen?--></p>
+<pre><code>arrabiata.pdf: arrabiata.Rmd sauce.csv R/pasta.R 
+  Rscript -e &quot;rmarkdown::render(&#39;arrabiata.Rmd&#39;)&quot;
+sauce.csv: R/cook.R tomatoes.zip aromatics.yaml
+  Rscript -e &quot;source(R/cook.R)&quot;
+aromatics.yaml: R/sizzle.R garlic.txt chili.json
+  Rscript -e &quot;source(R/sizzle.R)&quot;</code></pre>
+<p>Let’s break it down for our understanding. <span style="color:orange">arrabiata.pdf</span> is our sauce that we want to have.
+This sauce is created based on the files <span style="color:orange">arrabiata.Rmd</span>, our recipe, using <span style="color:orange">sauce.csv</span> and <span style="color:orange">/pasta.R</span>.</p>
+<p><span style="color:orange">sauce.csv</span> is created with <span style="color:orange">R/cook.R</span> with the raw materials <span style="color:orange">tomatoes.zip</span> and <span style="color:orange">aromatics.yaml</span>.</p>
+<p><span style="color:orange">aromatics.yaml</span> in turn is created by <span style="color:orange">R/sizzle.R</span> with the raw materials <span style="color:orange">garlic.txt</span> and <span style="color:orange">chili.json</span>.</p>
+<p>If you have trouble understanding the recipe, don’t worry, we’re all just virtual people.
+Maybe a conversation with ReproDude will help you?</p>
+<p>After looking at the arrabiata sauce now another example of culinary masterpiece.</p>
+<p><span style="color:brown">Brownies.</span></p>
+<p>Just kidding, let’s get out of here or I’ll need a lunch break.</p>
+<p>Instead, let’s point out the key features of this kind of recipes by Make:</p>
+<ul>
+<li><p>Missing ingredients will be generated,<br />
+<small><em>e.g., if the cleaned data is missing, the raw data is first cleaned.</em></small></p></li>
+<li><p>Newer ingredients trigger updates,<br />
+<small><em>e.g., new data leads to recreation of the whole manuscript.</em></small></p></li>
+<li><p>Always the same “button” that triggers reproduction,<br />
+<small><em>e.g., regardless of programming language, file format, and intermediate steps.</em></small></p></li>
+</ul>
+<p>And the great thing is that repro::automate() automatically generates recipes for Rmds, only deeper nested dependencies must be added manually.</p>
+<div id="hands-on-1" class="section level3 unnumbered hasAnchor">
+<h3>Hands on!<a href="workflow-orchestration.html#hands-on-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>But now we have had enough thinking, let’s go back to the code!</p>
+<p><span style="color:green">Go to the terminal (<span style="color:orange">Alt + Shift + M</span>) and type <span style="color:orange">make inflation.pdf</span></span></p>
+<p><span style="color:green">Delete <span style="color:orange">inflation.pdf.</span></span></p>
+<p><span style="color:green">Add <span style="color:orange">inflation.pdf</span> to the target <span style="color:orange">all (all: inflation.pdf).</span></span></p>
+<p><span style="color:green">Go to the terminal (<span style="color:orange">Alt + Shift + M</span>) and type <span style="color:orange">make</span></span></p>
+<p><span style="color:blue">Run: <span style="color:orange">make -B –dry-run</span></span></p>
+<p>[Hint: <span style="color:orange">-B</span> means rebuild everything. <span style="color:orange">–dry-run</span> means do not actually run the commands.</span>]</p>
+<p>And now that we’ve created the recipe, let’s take it one step further and Make it in the cloud.</p>
+<p><span style="color:green">Run <span style="color:orange">repro::use_make_publish()</span></span></p>
+<p><span style="color:green">Paste the following into the <span style="color:orange">Makefile:</span></span></p>
+<p>publish/: inflation.pdf
+include .repro/Makefile_publish</p>
+<p><span style="color:green">Run <span style="color:orange">repro::use_gha_publish()</span></span></p>
+<p><span style="color:green">Commit and push.</span></p>
+<p><span style="color:blue">Inspect <span style="color:orange">.repro/Makefile_publish.</span></span></p>
 
+</div>
 </div>
 </div>
             </section>
