@@ -29,7 +29,7 @@ set in the _output.yml file.</p>" />
 <meta name="author" content="Aaron Peikert &amp; Hannes Diemerling" />
 
 
-<meta name="date" content="2023-06-09" />
+<meta name="date" content="2023-06-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -217,7 +217,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="workflow-orchestration.html"><a href="workflow-orchestration.html#almost-the-final-final-step"><i class="fa fa-check"></i>Almost the Final Final Step!</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="before-you-go.html"><a href="before-you-go.html"><i class="fa fa-check"></i>Before you go</a></li>
+<li class="chapter" data-level="" data-path="before-you-go.html"><a href="before-you-go.html"><i class="fa fa-check"></i>Before you go</a>
+<ul>
+<li class="chapter" data-level="" data-path="before-you-go.html"><a href="before-you-go.html#ressources"><i class="fa fa-check"></i>Ressources</a>
+<ul>
+<li class="chapter" data-level="" data-path="before-you-go.html"><a href="before-you-go.html#starter"><i class="fa fa-check"></i>Starter</a></li>
+<li class="chapter" data-level="" data-path="before-you-go.html"><a href="before-you-go.html#advanced"><i class="fa fa-check"></i>Advanced</a></li>
+<li class="chapter" data-level="" data-path="before-you-go.html"><a href="before-you-go.html#digging-really-deep"><i class="fa fa-check"></i>Digging really Deep</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="before-you-go.html"><a href="before-you-go.html#hard-to-say-goodbye"><i class="fa fa-check"></i>Hard to say Goodbye</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -247,6 +256,10 @@ ReproDude
 <p class="infobox-contentgpt">
 Hey, I’m your ReproDude for this chapter. If you have any questions click on me and we can talk!
 </p>
+</div>
+<!-- so that there is no text between the Boxes-->
+<div style="clear: both;">
+
 </div>
 <div id="what-now-1" class="section level2 unnumbered hasAnchor">
 <h2>What now?<a href="software-management.html#what-now-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -296,6 +309,18 @@ This approach provides a unified and consistent environment that is isolated fro
 [Besides, it would go beyond the scope of the workshop if we were to do every step ourselves.]</p>
 <div id="repro" class="section level3 unnumbered hasAnchor">
 <h3>repro!<a href="software-management.html#repro" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="infobox" onclick="window.open(&#39;https://github.com/aaronpeikert/repro&#39;, &#39;_blank&#39;)">
+<h2 class="infobox-title">
+repro
+</h2>
+<p class="infobox-content">
+I will lead you to a deep dive of the repro package.
+</p>
+</div>
+<!-- so that there is no text between the Boxes-->
+<div style="clear: both;">
+
+</div>
 <p><span style="color:orange">repro</span> uses metadata in Rmds to infer (among other things) the software environment required.</p>
 <p><span style="color:green">Trigger this mechanism using: <span style="color:orange">repro::automate()</span></span></p>
 <p><span style="color:green">Take a look at the newly generated file <span style="color:orange">Dockerfile.</span></span></p>
