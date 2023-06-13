@@ -29,7 +29,7 @@ set in the _output.yml file.</p>" />
 <meta name="author" content="Aaron Peikert &amp; Hannes Diemerling" />
 
 
-<meta name="date" content="2023-06-12" />
+<meta name="date" content="2023-06-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -267,8 +267,8 @@ Hey, I’m your ReproDude for this chapter. If you have any questions click on m
 What is it about?</p>
 <p>As usual, let’s look at our components, which one is missing?</p>
 <p>code + data + text + history + software + <span style="color:orange">workflow</span></p>
-<p>Workflow, I heard of that.
-Let’s peek again at our problem and softwaresolution lists to be sure.</p>
+<p>Workflow, I think I heard of that.
+Let’s peek again at our problem and software solution lists to be sure.</p>
 <p>Problem list:</p>
 <ol style="list-style-type: decimal">
 <li><del>copy&amp;paste mistakes</del></li>
@@ -300,9 +300,10 @@ Click on me for the documentation of Make!
 <div style="clear: both;">
 
 </div>
-<p>To understand what make is, let’s take a step back.
+<p>To understand what Make is, let’s take a step back.
 To do that, let’s move on to a topic that I’m really passionate about.
-Food. And even one step further back, cooking.
+Food.
+And even one step further back, cooking.
 What is cooking?</p>
 <p>Besides the definition of content, cooking is a sequence of dependencies.
 Let’s take a look at my favorite recipe.</p>
@@ -317,7 +318,7 @@ Let’s take a look at my favorite recipe.</p>
 </blockquote>
 <p>Despite the beauty inherent in this recipe, we also want to formalize it.
 Let’s see how this recipe looks in a formalized version:
-<!--Python part wieder einfügen?--></p>
+<!--Python part wieder einfügen? Hat beim rendern zu problemen geführt.--></p>
 <pre><code>arrabiata.pdf: arrabiata.Rmd sauce.csv R/pasta.R 
   Rscript -e &quot;rmarkdown::render(&#39;arrabiata.Rmd&#39;)&quot;
 sauce.csv: R/cook.R tomatoes.zip aromatics.yaml
@@ -342,7 +343,7 @@ Maybe a conversation with ReproDude will help you?</p>
 <li><p>Always the same “button” that triggers reproduction,<br />
 <small><em>e.g., regardless of programming language, file format, and intermediate steps.</em></small></p></li>
 </ul>
-<p>And the great thing is that repro::automate() automatically generates recipes for Rmds, only deeper nested dependencies must be added manually.</p>
+<p>And the great thing is that <span style="color:orange">repro::automate()</span> automatically generates recipes for Rmds, only deeper nested dependencies must be added manually.</p>
 <div id="hands-on-1" class="section level3 unnumbered hasAnchor">
 <h3>Hands on!<a href="workflow-orchestration.html#hands-on-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>But now we have had enough thinking, let’s go back to the code!</p>
@@ -352,11 +353,11 @@ Maybe a conversation with ReproDude will help you?</p>
 <p><span style="color:green">Go to the terminal (<span style="color:orange">Alt + Shift + M</span>) and type <span style="color:orange">make</span></span></p>
 <p><span style="color:blue">Run: <span style="color:orange">make -B –dry-run</span></span></p>
 <p>[Hint: <span style="color:orange">-B</span> means rebuild everything. <span style="color:orange">–dry-run</span> means do not actually run the commands.</span>]</p>
-<p>And now that we’ve created the recipe, let’s take it one step further and Make it in the cloud.</p>
+<p>And now that we’ve created the recipe, let’s take it one step further and <em>Make</em> it in the cloud.</p>
 <p><span style="color:green">Run <span style="color:orange">repro::use_make_publish()</span></span></p>
 <p><span style="color:green">Paste the following into the <span style="color:orange">Makefile:</span></span></p>
-<p>publish/: inflation.pdf
-include .repro/Makefile_publish</p>
+<pre><code>publish/: inflation.pdf
+include .repro/Makefile_publish</code></pre>
 <p><span style="color:green">Run <span style="color:orange">repro::use_gha_publish()</span></span></p>
 <p><span style="color:green">Commit and push.</span></p>
 <p><span style="color:blue">Inspect <span style="color:orange">.repro/Makefile_publish.</span></span></p>
@@ -368,8 +369,8 @@ This makefile will ensure that we can track how our sauce is created!</p>
 </div>
 <div id="and-now-3" class="section level2 unnumbered hasAnchor">
 <h2>And now?<a href="workflow-orchestration.html#and-now-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Congratulations, we are more or less at the finish line!</p>
-<p>Before we stop, let’s take one more quick look together at what we just did.
+<p>Congratulations, we are more or less near the finish line!</p>
+<p>Before we will finish, let’s take one more quick look together at what we just did.
 We now have all the components from our toolbox together.</p>
 <p><span style="color:orange">code + data + text + history + software + workflow</span></p>
 <p>And with that we solved our last Problem on the list:</p>

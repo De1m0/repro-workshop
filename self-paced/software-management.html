@@ -29,7 +29,7 @@ set in the _output.yml file.</p>" />
 <meta name="author" content="Aaron Peikert &amp; Hannes Diemerling" />
 
 
-<meta name="date" content="2023-06-12" />
+<meta name="date" content="2023-06-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -282,8 +282,8 @@ What’s next?</p>
 <li><span style="color:orange">Docker</span></li>
 <li>Make</li>
 </ol>
-<p>So that means we use the Docker to avoid the problem of missing or incompatible software?
-This sounds like a program I would have needed for a while.
+<p>So that means we use Docker to avoid the problem of missing or incompatible software?
+This sounds like a program I would have needed a while ago…
 Then let’s jump right in!</p>
 </div>
 <div id="docker" class="section level2 unnumbered hasAnchor">
@@ -306,7 +306,7 @@ This approach provides a unified and consistent environment that is isolated fro
 </ul>
 <p>These packages are “training wheels” and not required.</p>
 <p>Nevertheless, the use of repro prevents headaches by taking over many steps.
-[Besides, it would go beyond the scope of the workshop if we were to do every step ourselves.]</p>
+[Besides, it would go way beyond the scope of the workshop if we were to do every step ourselves.]</p>
 <div id="repro" class="section level3 unnumbered hasAnchor">
 <h3>repro!<a href="software-management.html#repro" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="infobox" onclick="window.open(&#39;https://github.com/aaronpeikert/repro&#39;, &#39;_blank&#39;)">
@@ -321,6 +321,7 @@ I will lead you to a deep dive of the repro package.
 <div style="clear: both;">
 
 </div>
+<p>Then let’s dive into the repro package together.</p>
 <p><span style="color:orange">repro</span> uses metadata in Rmds to infer (among other things) the software environment required.</p>
 <p><span style="color:green">Trigger this mechanism using: <span style="color:orange">repro::automate()</span></span></p>
 <p><span style="color:green">Take a look at the newly generated file <span style="color:orange">Dockerfile.</span></span></p>
@@ -329,7 +330,7 @@ I will lead you to a deep dive of the repro package.
 <p><span style="color:blue">Add any package of your liking to any Rmd and run <span style="color:orange">repro::automate()</span></span></p>
 <p><span style="color:blue">Take a look at the file <span style="color:orange">.repro/Dockerfile_base</span> and friends. How would you change the R version used?</span></p>
 <p>Now we will use GitHub action (GHA).
-GitHub action is a cloud service that runs software when certain events trigger it.</p>
+GitHub action is a cloud service that runs software when certain events trigger it (like Pushing something up to GitHub).</p>
 <p><span style="color:green">Add a GitHub Action to build the required Docker image with <span style="color:orange">repro::use_gha_docker()</span></span></p>
 <p><span style="color:green">To trigger the action, commit and push your changes.</span></p>
 <p><span style="color:green">Browse through the actions: <span style="color:orange">usethis::browse_github_actions()</span></span></p>
@@ -344,7 +345,7 @@ These Docker images now ensure a reproducible software environment!</p>
 <h2>And now?<a href="software-management.html#and-now-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Congratulations, we are approaching the finish line!</p>
 <p>Before we continue, let’s take another quick look together at what we have just done.
-We have now yet one component more in our toolbox.</p>
+We now have one more component in our toolbox:</p>
 <p><span style="color:orange">code + data + text + history + software</span> + workflow</p>
 <p>And with that we solved our third Problem on the list:</p>
 <ol style="list-style-type: decimal">
@@ -353,7 +354,7 @@ We have now yet one component more in our toolbox.</p>
 <li><del>missing or incompatible software</del></li>
 <li>complicated or ambiguous procedure for reproduction</li>
 </ol>
-<p>And which software did we just use for this:</p>
+<p>And which software did we just used for this?:</p>
 <ol style="list-style-type: decimal">
 <li>RMarkdown</li>
 <li>Git</li>

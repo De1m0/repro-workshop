@@ -29,7 +29,7 @@ set in the _output.yml file.</p>" />
 <meta name="author" content="Aaron Peikert &amp; Hannes Diemerling" />
 
 
-<meta name="date" content="2023-06-12" />
+<meta name="date" content="2023-06-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -271,25 +271,26 @@ If not, take as much time as you need and move on as soon as you want, I have no
 </div>
 <div id="best-practices" class="section level2 unnumbered hasAnchor">
 <h2>Best practices?<a href="dynamic-documents.html#best-practices" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>To give you a sense of how reproducibility can be increased, i will show you some best practices:</p>
+<p>To give you a sense of how reproducibility can be increased, let us look at some best practices:</p>
 <p><span style="color:green"> Open the R folder.</span></p>
 <p>You should now see three different R files.</p>
 <p><span style="color:green"> Click on the file </span><span style="color:orange">R/prepare_games.R </span></p>
-<p>Now try to understand the code.
-Which of these do you already do?
-What could you improve?
-You want to see more?
-Because it’s you (same thing but more complicated):</p>
-<p><span style="color:green"> Take a look at </span><span style="color:orange">R/prepare_inflation </span></p>
+<p>Now try to understand the code.</p>
+<p>Which of these do you already do?
+What could you improve?</p>
+<p>You want to see more?
+Just for you (same thing but more complicated):</p>
+<p><span style="color:blue"> Take a look at </span><span style="color:orange">R/prepare_inflation </span></p>
 <div id="a-summary" class="section level3 unnumbered hasAnchor">
 <h3>A summary?<a href="dynamic-documents.html#a-summary" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>To summarize this in an incomplete list:</p>
+<p>Let us summarize this in an incomplete list:</p>
 <ol style="list-style-type: decimal">
 <li>List requirements early</li>
 <li>Use relative locations</li>
 <li>Document relevant information</li>
 </ol>
-<p>Let’s talk about the last point.
+<p>The first two points are more or less clear, if you would like to talk about that, maybe you want to give ReproDude a try?</p>
+<p>But let’s talk about the last point.
 Does that mean that every piece of documentation has to be a mile long?</p>
 <p>No…. not necessarily.</p>
 <p>But how do I decide what should or should not be included in my documentation?
@@ -299,7 +300,7 @@ Let’s make another list:</p>
 <li>What is <em>easy</em> needs only little documentation.</li>
 <li>What is <em>consistent</em> only has to be documented once.</li>
 </ol>
-<p>Great, now you’ve already finished the necessary!
+<p>Great, now you’ve already finished the <span style="color:orange">necessary</span>!
 You want to go straight on?
 Let’s take a look at the extended Goals first.</p>
 </div>
@@ -312,13 +313,16 @@ Let’s take a look at the extended Goals first.</p>
 </div>
 <p>So, did I confuse you with that?
 Don’t worry, we’re in this together.
+Let us break it down.
 What components do we need to get closer to reproducibility?</p>
 <p>code + data + text + history + software + workflow</p>
-<p>But we have already looked at something.
+<p>But haven’t we already looked at parts of it?
 Was that already part of the overall picture?
 Yes!</p>
 <p><span style="color:orange">code + data</span> + text + history + software + workflow</p>
-<p>We have already dealt with code and data, so next is text.
+<p>We have already dealt with code and data.
+If you want to read up on it again, go back to the beginning of this chapter.</p>
+<p>Next is text.
 Let’s look again at the problems we need to solve:</p>
 <ol style="list-style-type: decimal">
 <li>copy&amp;paste mistakes</li>
@@ -345,20 +349,23 @@ RMarkdown
 I will give you more information about RMarkdown by taking you to their documentation.
 </p>
 </div>
-<p>Now let’s go back to your environment.</p>
+<!-- so that there is no text between the Boxes-->
+<div style="clear: both;">
+
+</div>
+<p>Now let’s go back to your R environment.</p>
 <p><span style="color:green">Open the file</span><span style="color:orange">inflation.Rmd.</span></p>
 <p>If you are still in the R folder, you have to go up one level again.</p>
-<p><span style="color:green">Take a minute to skim the document.</span></p>
-<p>Or even two.</p>
+<p><span style="color:green">Take a minute to skim the document (Or even two).</span></p>
 <p><span style="color:green">Click on </span><span style="color:orange">knit.</span></p>
 <p><span style="color:blue">And if you want to admire more examples, click on </span><span style="color:orange"><a href="https://rmarkdown.rstudio.com/gallery.html">RMarkdown Gallery</a>.</span></p>
 <div id="metadata-yaml" class="section level3 unnumbered hasAnchor">
 <h3>Metadata (YAML)<a href="dynamic-documents.html#metadata-yaml" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Now that you have looked at at least one RMarkdown example, did you notice the following part:</p>
+<p>Now that you have looked at at least one RMarkdown example, did you notice the following part?:</p>
 <pre><code>---
 title: &quot;Inflation Data&quot;
 author: &quot;Aaron Peikert&quot;
-date: &quot;2023-06-12&quot;
+date: &quot;2023-06-13&quot;
 output: html_document
 repro:
   packages:
@@ -374,8 +381,8 @@ repro:
 <p>This is the metadata, in YAML format, for the RMarkdown document.</p>
 <p><span style="color:green">Change <span style="color:orange">html_document </span> to <span style="color:orange">pdf_document </span></span></p>
 <p><span style="color:green">Knit again.</span></p>
-<p>What happened?
-You want to experiment more?</p>
+<p>What happened?</p>
+<p>You want to experiment more?</p>
 <p><span style="color:blue">Change the author or date field.</span>
 <span style="color:blue">Try the <span style="color:orange"><a href="https://rstudio.github.io/tufte/">tufte-format (click me)</a>.</span></span></p>
 </div>
@@ -387,15 +394,15 @@ You want to experiment more?</p>
 I quote:
 
 &gt; This dataset contains the individual responses to our Inflation Attitudes Survey, a quarterly survey of people’s feelings about inflation and other economic variables like the interest rate. </code></pre>
-<p>This is markdown and we use it to write and format the actual text.</p>
+<p>This is markdown and we will use it to write and format the actual text.</p>
 <p><span style="color:green">Make something <strong>bold</strong> and something else <em>italic</em>:</span></p>
 <pre><code>This is **bold**, while this is *italic*.</code></pre>
 <p><span style="color:blue">Go to <span style="color:orange">Help → Markdown Quick Reference</span> and try something out.</span></p>
 </div>
 <div id="code-r" class="section level3 unnumbered hasAnchor">
 <h3>Code (R)<a href="dynamic-documents.html#code-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>But there is another component in the document.
-This part are code blocks like:</p>
+<p>But there is yet another component in the document.
+This part contain code blocks like:</p>
 <pre><code>inflation %&gt;% 
   group_by(date) %&gt;% 
   summarise(across(c(perception, expectation),
@@ -407,7 +414,7 @@ This part are code blocks like:</p>
   geom_line(aes(date, value, color = name)) +
   NULL</code></pre>
 <p>These code blocks can be not only R code but also Julia, Python, Octave and other programming languages.</p>
-<p><span style="color:green">Add a code chunk (Ctrl + Alt + I) and inline code:</span></p>
+<p><span style="color:green">Add a R code chunk (Ctrl + Alt + I) and inline code:</span></p>
 <!-- Bad solution, somethin better? -->
 <div class="sourceCode" id="cb5"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb5-1"><a href="dynamic-documents.html#cb5-1" aria-hidden="true" tabindex="-1"></a>A code chunk is for longer code/output:</span>
 <span id="cb5-2"><a href="dynamic-documents.html#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -425,7 +432,7 @@ This part are code blocks like:</p>
 <p><span style="color:blue">Try using python:</span></p>
 <!-- Bad solution, somethin better? -->
 <div class="sourceCode" id="cb6"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb6-1"><a href="dynamic-documents.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb6-2"><a href="dynamic-documents.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="in">print(&quot;Hi! Python here, do you miss R already?&quot;)</span></span>
+<span id="cb6-2"><a href="dynamic-documents.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="in">print(&quot;Hello World! Python here, do you miss R already?&quot;)</span></span>
 <span id="cb6-3"><a href="dynamic-documents.html#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
 </div>
 </div>
@@ -442,7 +449,7 @@ We have now one component more in our toolbox.</p>
 <li>missing or incompatible software</li>
 <li>complicated or ambiguous procedure for reproduction</li>
 </ol>
-<p>And which software did we just use for this:</p>
+<p>And which software did we just used for this?:</p>
 <ol style="list-style-type: decimal">
 <li><span style="color:orange">RMarkdown</span></li>
 <li>Git</li>
