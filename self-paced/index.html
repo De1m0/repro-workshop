@@ -5,31 +5,25 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Reproducible Research</title>
-  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
-The HTML output format for this example is bookdown::gitbook,
-set in the _output.yml file.</p>" />
+  <meta name="description" content="This is a self-paced workshop on how to implement reproducible research with RMarkdown, Docker, Make, Git, GitHub (Actions)." />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Reproducible Research" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
-The HTML output format for this example is bookdown::gitbook,
-set in the _output.yml file.</p>" />
+  <meta property="og:description" content="This is a self-paced workshop on how to implement reproducible research with RMarkdown, Docker, Make, Git, GitHub (Actions)." />
   <meta name="github-repo" content="aaronpeikert/repro-workshop" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Reproducible Research" />
   
-  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
-The HTML output format for this example is bookdown::gitbook,
-set in the _output.yml file.</p>" />
+  <meta name="twitter:description" content="This is a self-paced workshop on how to implement reproducible research with RMarkdown, Docker, Make, Git, GitHub (Actions)." />
   
 
 <meta name="author" content="Aaron Peikert &amp; Hannes Diemerling" />
 
 
-<meta name="date" content="2023-06-14" />
+<meta name="date" content="2023-09-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -152,19 +146,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html#what-services-will-we-use"><i class="fa fa-check"></i>What services will we use?</a></li>
 <li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html#what-does-self-paced-mean"><i class="fa fa-check"></i>What does self-paced mean?</a></li>
 <li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html#what-are-infoboxes"><i class="fa fa-check"></i>What are infoboxes?</a></li>
-<li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html#what-else-should-i-know-before-i-start"><i class="fa fa-check"></i>What else should i know before I start?</a></li>
+<li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html#what-else-should-i-know-before-i-start"><i class="fa fa-check"></i>What else should I know before I start?</a></li>
 <li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html#questions-comments-notes"><i class="fa fa-check"></i>Questions? Comments? Notes?</a></li>
 <li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html#setup"><i class="fa fa-check"></i>Setup!</a>
 <ul>
 <li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html#github"><i class="fa fa-check"></i>GitHub</a></li>
-<li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html#postirstudio-cloud"><i class="fa fa-check"></i>Posti/RStudio Cloud</a></li>
+<li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html#positrstudio-cloud"><i class="fa fa-check"></i>Posit/RStudio Cloud</a></li>
 <li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html#chatgpt"><i class="fa fa-check"></i>ChatGPT</a></li>
 <li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html#final-step"><i class="fa fa-check"></i>Final Step</a></li>
+<li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html#video"><i class="fa fa-check"></i>Video</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="" data-path="alternative-download-for-dataset.html"><a href="alternative-download-for-dataset.html"><i class="fa fa-check"></i>Alternative Download for Dataset</a></li>
 <li class="chapter" data-level="" data-path="dynamic-documents.html"><a href="dynamic-documents.html"><i class="fa fa-check"></i>Dynamic Documents</a>
 <ul>
-<li class="chapter" data-level="" data-path="dynamic-documents.html"><a href="dynamic-documents.html#what-do-i-see-before-me"><i class="fa fa-check"></i>What do I see before me?</a></li>
+<li class="chapter" data-level="" data-path="dynamic-documents.html"><a href="dynamic-documents.html#what-do-you-see-before-you"><i class="fa fa-check"></i>What do you see before you?</a></li>
 <li class="chapter" data-level="" data-path="dynamic-documents.html"><a href="dynamic-documents.html#best-practices"><i class="fa fa-check"></i>Best practices?</a>
 <ul>
 <li class="chapter" data-level="" data-path="dynamic-documents.html"><a href="dynamic-documents.html#a-summary"><i class="fa fa-check"></i>A summary?</a></li>
@@ -173,12 +169,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="dynamic-documents.html"><a href="dynamic-documents.html#rmarkdown"><i class="fa fa-check"></i>RMarkdown</a>
 <ul>
 <li class="chapter" data-level="" data-path="dynamic-documents.html"><a href="dynamic-documents.html#metadata-yaml"><i class="fa fa-check"></i>Metadata (YAML)</a></li>
-<li class="chapter" data-level="" data-path="dynamic-documents.html"><a href="dynamic-documents.html#text-markdown"><i class="fa fa-check"></i>Text (markdown)</a></li>
+<li class="chapter" data-level="" data-path="dynamic-documents.html"><a href="dynamic-documents.html#text-markdown"><i class="fa fa-check"></i>Text (Markdown)</a></li>
 <li class="chapter" data-level="" data-path="dynamic-documents.html"><a href="dynamic-documents.html#code-r"><i class="fa fa-check"></i>Code (R)</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="dynamic-documents.html"><a href="dynamic-documents.html#and-now"><i class="fa fa-check"></i>And now?</a>
 <ul>
 <li class="chapter" data-level="" data-path="dynamic-documents.html"><a href="dynamic-documents.html#final-step-1"><i class="fa fa-check"></i>Final Step</a></li>
+<li class="chapter" data-level="" data-path="dynamic-documents.html"><a href="dynamic-documents.html#video-1"><i class="fa fa-check"></i>Video</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="version-control.html"><a href="version-control.html"><i class="fa fa-check"></i>Version Control</a>
@@ -191,6 +188,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="version-control.html"><a href="version-control.html#and-now-1"><i class="fa fa-check"></i>And now?</a>
 <ul>
 <li class="chapter" data-level="" data-path="version-control.html"><a href="version-control.html#final-step-2"><i class="fa fa-check"></i>Final Step!</a></li>
+<li class="chapter" data-level="" data-path="version-control.html"><a href="version-control.html#video-2"><i class="fa fa-check"></i>Video</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="software-management.html"><a href="software-management.html"><i class="fa fa-check"></i>Software Management</a>
@@ -203,6 +201,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="software-management.html"><a href="software-management.html#and-now-2"><i class="fa fa-check"></i>And now?</a>
 <ul>
 <li class="chapter" data-level="" data-path="software-management.html"><a href="software-management.html#final-step-3"><i class="fa fa-check"></i>Final Step!</a></li>
+<li class="chapter" data-level="" data-path="software-management.html"><a href="software-management.html#video-3"><i class="fa fa-check"></i>Video</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="workflow-orchestration.html"><a href="workflow-orchestration.html"><i class="fa fa-check"></i>Workflow Orchestration</a>
@@ -215,6 +214,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="workflow-orchestration.html"><a href="workflow-orchestration.html#and-now-3"><i class="fa fa-check"></i>And now?</a>
 <ul>
 <li class="chapter" data-level="" data-path="workflow-orchestration.html"><a href="workflow-orchestration.html#almost-the-final-final-step"><i class="fa fa-check"></i>Almost the Final Final Step!</a></li>
+<li class="chapter" data-level="" data-path="workflow-orchestration.html"><a href="workflow-orchestration.html#video-4"><i class="fa fa-check"></i>Video</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="before-you-go.html"><a href="before-you-go.html"><i class="fa fa-check"></i>Before you go</a>
@@ -228,7 +228,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="before-you-go.html"><a href="before-you-go.html#hard-to-say-goodbye"><i class="fa fa-check"></i>Hard to say Goodbye</a></li>
 </ul></li>
 <li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+<li><a href="https://github.com/aaronpeikert/repro-workshop/issues/new" target="blank">Questions? Problems? Suggestions?</a></li>
+<li><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="blank">Licensed under CC0, but please cite us.</a></li>
 
 </ul>
 
@@ -251,14 +252,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1 class="title">Reproducible Research</h1>
 <h2 class="subtitle"><em>How to do the same thing more than once</em></h2>
 <p class="author"><em>Aaron Peikert &amp; Hannes Diemerling</em></p>
-<p class="date"><em>2023-06-14</em></p>
+<p class="date"><em>2023-09-02</em></p>
 </div>
 <div id="about" class="section level1 unnumbered hasAnchor">
 <h1>About<a href="index.html#about" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>We (Aaron Peikert and Hannes Diemerling) are currently working on a <em>self paced</em> version of this workshop.
-This is a work in progress!</p>
-<p>wer wir sind, wo wir herkommen und email</p>
-<p>leute die im workshop sind sollen hier begrüßt werden und leute im internet sollen sich damit auch selbst zurechtfinden im notfall.</p>
+<p>We (<a href="mailto:peikert@mpib-berlin.mpg.de">Aaron Peikert</a> and <a href="mailto:diemerling@mpib-berlin.mpg.de">Hannes Diemerling</a>) work at the Formal Methods project at the Max Planck Institute for Human Development.
+Do no hesitate to contact us via email if you have any questions!
+If you found typos, have problems, or have suggestions for improvement <a href="https://github.com/aaronpeikert/repro-workshop/issues/new">please open an issue</a>.</p>
+<p>If you found your way to this page because you are currently participating in a workshop, thank you for attending!
+You can head to the <a href="./getting-started.html">next chapter “Getting Started”</a></p>
+<p>If you are here on your own, you are welcome to try the workshop; however, we can not gaurantee that the instructions on this website will work at random time points between workshops.
+In case you like what you see and you want to offer this workshop at your institution, <a href="mailto:peikert@mpib-berlin.mpg.de">get in touch with us</a>.</p>
+<p>You may use all materials from the <a href="https://www.github.com/aaronpeikert/repro-workshop">GitHub repo</a> under the <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal licence</a> unless noted otherwise; still, we expect that you credit us where appropriate (e.g., with citing this as the source).</p>
 
 </div>
             </section>
